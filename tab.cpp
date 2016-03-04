@@ -1,6 +1,8 @@
 #include "tab.h"
 #include <iostream>
 
+
+// Tworzy poczatkowa tablice
 Tab::Tab()
 {
 	tab = Alloc(START_SIZE);
@@ -8,7 +10,7 @@ Tab::Tab()
 
 }
 
-
+// Wypisuje wszystkie wartosci w tablicy
 void Tab::List()
 {
 	int i = 0;
@@ -18,26 +20,20 @@ void Tab::List()
 		i++;
 	}
 }
+
+// Zwraca wskaznik na nowa tablice
 int* Tab::Alloc(int size)
 {
-
-	int* tmp = new int[size];
-
-	if(tmp)
-	{
-		this->size = size;
-		return tmp;
-	}
-	else
-		return 0;
-
+	return new int[size];
 }
 
+// Zwalnia wskaznik na tablice
 void Tab::Dealloc()
 {
 	delete[] tab;
 }
 
+// Dodaje nowa wartosc do tablicy
 void Tab::Add(int number)
 {
 	int* tmp;

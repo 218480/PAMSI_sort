@@ -6,7 +6,7 @@
 #define START_SIZE 2
 
 
-
+// Klasa tablicy dynamicznej
 class Tab
 {
 private:
