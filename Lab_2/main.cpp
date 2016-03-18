@@ -3,39 +3,24 @@
 #include <cmath>
 #include "timer.h"
 #include "tab.h"
-
-
+#include "tabtest.h"
 
 
 using namespace std;
 int main(int argc, char ** argv)
 {
-	int tmp = 0;
-	string name;
-	ifstream plik;
+	Timer time;
+	TabTest test;
 
 
-	//`std:cout << "Podaj nazwe pliku do otwarcia: ";
-	//cin >> name;
-	//plik.open(name.c_str(), ios::in);
+	test.Przygotuj();
+	time.Start();
+	test.Badaj();
+	time.Stop();
+	cout << "Czas: " << time.Show() << " ms."<< endl;
 
 
 
-	Timer tim;	     // Pomiar czasu
-	Tab dynamic_tab; // Tablica dynamiczna
-
-	tim.Start();     // Poczatek pomiaru czasu
-	for(long int i = 0; i < pow(10,6); i++)
-	{
-		//plik >> tmp;
-		dynamic_tab.Add(1);
-
-	}
-
-	cout << endl;
-
-	cout << endl << "Czas dzialania programu: " << tim.Show() << " ms" << endl;
-	cout << "Koniec programu." << endl;
 
 
 	return 0;

@@ -11,6 +11,10 @@ Tab::Tab()
 
 }
 
+void Tab::Set_Allocate_Size(unsigned int n)
+{
+	this->allocate_size = n;
+}
 // Wypisuje wszystkie wartosci w tablicy
 void Tab::List()
 {
@@ -47,11 +51,8 @@ void Tab::Add(int number)
 	}
 	else
 	{
-#ifdef DOUBLE_SIZE
-		tmp = Alloc(size * 2);
-#else
-		tmp = Alloc(size + ALLOCATE_SIZE);
-#endif
+
+		tmp = Alloc(size + this->allocate_size);
 
 		for(unsigned int i = 0; i < index; i++)
 		{

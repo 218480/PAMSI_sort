@@ -4,8 +4,6 @@
 
 
 #define START_SIZE 10
-#define ALLOCATE_SIZE 1000
-//#define DOUBLE_SIZE    // Strategia podwajania rozmiaru tablicy w przypadku braku miejsca
 
 // Klasa tablicy dynamicznej
 class Tab
@@ -15,12 +13,17 @@ private:
 	unsigned int size;
 	unsigned int index;
 
+protected:
+
+
 public:
 	void Add(int number);
+	void Set_Allocate_Size(unsigned int n);
 	int* Alloc(unsigned int size);
 	void Dealloc();
 	void List();
 
+	unsigned int allocate_size;
 	Tab();
 
 };

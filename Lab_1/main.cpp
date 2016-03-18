@@ -6,10 +6,25 @@
 
 
 
-
 using namespace std;
 int main(int argc, char ** argv)
 {
+	Timer time;
+
+
+
+
+	time.Start();
+
+	time.Stop();
+	cout << "Czas: " << time.Show() << endl;
+
+
+
+
+
+
+
 	int tmp = 0;
 	string name;
 	ifstream plik;
@@ -32,10 +47,7 @@ int main(int argc, char ** argv)
 
 	}
 
-	cout << endl;
 
-	cout << endl << "Czas dzialania programu: " << tim.Show() << " ms" << endl;
-	cout << "Koniec programu." << endl;
 
 
 	return 0;
