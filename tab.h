@@ -3,8 +3,7 @@
 
 
 
-#define START_SIZE 2
-
+#define START_SIZE 10
 
 // Klasa tablicy dynamicznej
 class Tab
@@ -14,12 +13,17 @@ private:
 	unsigned int size;
 	unsigned int index;
 
+protected:
+
+
 public:
 	void Add(int number);
-	int* Alloc(int size);
+	void Set_Allocate_Size(unsigned int n);
+	int* Alloc(unsigned int size);
 	void Dealloc();
 	void List();
 
+	unsigned int allocate_size;
 	Tab();
 
 };

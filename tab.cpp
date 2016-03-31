@@ -7,13 +7,20 @@ Tab::Tab()
 {
 	tab = Alloc(START_SIZE);
 	index = 0;
+	size = START_SIZE;
+	allocate_size = 1;
 
 }
 
+void Tab::Set_Allocate_Size(unsigned int n)
+{
+	this->allocate_size = n;
+
+}
 // Wypisuje wszystkie wartosci w tablicy
 void Tab::List()
 {
-	int i = 0;
+	unsigned int i = 0;
 	while(i < index)
 	{
 		std::cout << "Liczba: " << this->tab[i] << std::endl;
@@ -22,8 +29,9 @@ void Tab::List()
 }
 
 // Zwraca wskaznik na nowa tablice
-int* Tab::Alloc(int size)
+int* Tab::Alloc(unsigned int size)
 {
+	this->size = size;
 	return new int[size];
 }
 
@@ -38,15 +46,16 @@ void Tab::Add(int number)
 {
 	int* tmp;
 
-	if(index < size)
+	if(index < this->size )
 	{
 		tab[index] = number;
 		index++;
 	}
 	else
 	{
-		tmp = Alloc(size + 1);
-		for(int i = 0; i < index; i++)
+
+		tmp = Alloc(this->size + this->allocate_size);
+		for(unsigned int i = 0; i < index; i++)
 		{
 			tmp[i] = this->tab[i];
 		}

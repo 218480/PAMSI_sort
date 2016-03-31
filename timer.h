@@ -8,8 +8,10 @@ class Timer
 {
 private:
 	 timeb t_start;
+	 float value;
 public:
 	void Start();
+	void Stop();
 	float Show();
 	Timer();
 };
