@@ -5,8 +5,8 @@
  *      Author: dmajchrz
  */
 
-#include "tab.h"
-#include "tabtest.h"
+#include "../inc/tab.h"
+#include "../inc/tabtest.h"
 
 #include <iostream>
 
