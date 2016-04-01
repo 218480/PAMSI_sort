@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-#include "../inc/timer.h"
-#include "../inc/tab.h"
-#include "../inc/tabtest.h"
+#include "timer.h"
+#include "tab.h"
+#include "tabtest.h"
 
 
 using namespace std;

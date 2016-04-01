@@ -1,4 +1,4 @@
-#include "../inc/timer.h"
+#include "timer.h"
 
 // Uruchamia pomiar czasu
 void Timer::Start()

@@ -5,8 +5,8 @@
  *      Author: dmajchrz
  */
 
-#include "../inc/tab.h"
-#include "../inc/tabtest.h"
+#include "tab.h"
+#include "tabtest.h"
 
 #include <iostream>
 
@@ -28,7 +28,7 @@ void TabTest::Przygotuj()
 
 void TabTest::Badaj()
 {
-	for(unsigned int i = 0; i < this->problem_size; i++)
+	for(int i = 0; i < this->problem_size; i++)
 	{
 			dynamic_tab.Add(1);
 

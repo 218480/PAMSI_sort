@@ -1,4 +1,4 @@
-#include "../inc/tab.h"
+#include "tab.h"
 #include <iostream>
 
 
