@@ -1,20 +1,21 @@
-Lab3.out: main.o timer.o tab.o badania.o tabtest.o
-	g++ main.o timer.o tab.o badania.o tabtest.o -o Lab3.out
+Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tab.o ./obj/badania.o ./obj/tabtest.o
+	g++ ./obj/main.o ./obj/timer.o ./obj/tab.o ./obj/badania.o ./obj/tabtest.o -o Lab3.out
 
-main.o: main.cpp
-	g++ -c main.cpp -o main.o
+./obj/main.o: ./src/main.cpp
+	g++ -c ./src/main.cpp -o ./obj/main.o
 
-timer.o: timer.cpp
-	g++ -c timer.cpp -o timer.o
+./obj/timer.o: ./src/timer.cpp
+	g++ -c ./src/timer.cpp -o ./obj/timer.o
 
-tab.o: tab.cpp
-	g++ -c tab.cpp -o tab.o
+./obj/tab.o: ./src/tab.cpp
+	g++ -c ./src/tab.cpp -o ./obj/tab.o
 
-badania.o: badania.cpp
-	g++ -c badania.cpp -o badania.o
+./obj/badania.o: ./src/badania.cpp
+	g++ -c ./src/badania.cpp -o ./obj/badania.o
 
-tabtest.o: tabtest.cpp
-	g++ -c tabtest.cpp -o tabtest.o
+./obj/tabtest.o: ./src/tabtest.cpp
+	g++ -c ./src/tabtest.cpp -o ./obj/tabtest.o
 clean:
-	rm -f *.o *.out
+	rm -f ./obj/*.o *.out
+	rmdir ./obj 
 
