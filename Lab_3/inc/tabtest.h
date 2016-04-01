@@ -4,17 +4,16 @@
  *  Created on: 18 mar 2016
  *      Author: dmajchrz
  */
-#include "badania.h"
 
 
 #ifndef TABTEST_H_
 #define TABTEST_H_
 
 
-class TabTest : public Badania
+class TabTest
 {
 private:
-	Tab dynamic_tab;
+
 public:
 	unsigned int problem_size;
 	virtual void Badaj();
