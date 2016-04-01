@@ -8,12 +8,14 @@ Tab::Tab()
 	tab = Alloc(START_SIZE);
 	index = 0;
 	size = START_SIZE;
+	allocate_size = 1;
 
 }
 
 void Tab::Set_Allocate_Size(unsigned int n)
 {
 	this->allocate_size = n;
+
 }
 // Wypisuje wszystkie wartosci w tablicy
 void Tab::List()
@@ -44,7 +46,7 @@ void Tab::Add(int number)
 {
 	int* tmp;
 
-	if(index < size )
+	if(index < this->size )
 	{
 		tab[index] = number;
 		index++;
@@ -52,8 +54,7 @@ void Tab::Add(int number)
 	else
 	{
 
-		tmp = Alloc(size + this->allocate_size);
-
+		tmp = Alloc(this->size + this->allocate_size);
 		for(unsigned int i = 0; i < index; i++)
 		{
 			tmp[i] = this->tab[i];

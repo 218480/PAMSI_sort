@@ -15,7 +15,7 @@ using namespace std;
 
 void TabTest::Przygotuj()
 {
-	Tab dynamic_tab;
+
 	unsigned int tmp;
 
 	cout << "Podaj rozmiar problemu do zbadania: ";
