@@ -49,7 +49,7 @@ void List::Fill(int n)
 	Node* element;
 	for(int i = 0; i < n; i++)
 	{
-		tmp->Set_Value(i);
+	  tmp->Set_Value(rand());
 		element = new Node();
 		tmp->Set_Next(element);
 		tmp = tmp->Get_Next();

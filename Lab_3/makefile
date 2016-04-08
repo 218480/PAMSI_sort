@@ -1,7 +1,7 @@
-Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o ./obj/list.o ./obj/node.o
-	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/test.o ./obj/queue.o ./obj/list.o ./obj/node.o -o Lab3.out
+Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o ./obj/list.o ./obj/node.o ./obj/qsort.o
+	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/test.o ./obj/queue.o ./obj/list.o ./obj/node.o ./obj/qsort.o -o Lab3.out
 
-./obj/main.o: ./src/main.cpp
+./obj/main.o: ./src/main.cpp ./inc/qsort.h
 	mkdir ./obj
 	g++ -c ./src/main.cpp -o ./obj/main.o
 
@@ -22,6 +22,9 @@ Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o
 
 ./obj/node.o: ./src/node.cpp
 	g++ -c ./src/node.cpp -o ./obj/node.o
+
+./obj/qsort.o: ./src/qsort.cpp ./inc/qsort.h
+	g++ -c ./src/qsort.cpp -o ./obj/qsort.o
 clean:
 	rm -f ./obj/*.o *.out
 	rmdir ./obj 
