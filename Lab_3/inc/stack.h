@@ -19,7 +19,7 @@ private:
 public:
 	virtual int  Pop ();
 	virtual void Push(int val);
-	virtual int  size();
+	virtual int  Get_Size();
 	virtual ~Stack   ();
 };
 

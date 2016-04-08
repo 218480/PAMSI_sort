@@ -15,7 +15,7 @@ public:
 	virtual void Add        (int pos,int val) = 0;
 	virtual void Remove     (int pos)         = 0;
 	virtual int  Get        (int pos)   	  = 0;
-	virtual int  Size       ()				  = 0;
+	virtual int  Get_Size   ()                = 0;
 };
 
 

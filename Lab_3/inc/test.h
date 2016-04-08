@@ -9,14 +9,19 @@
 #ifndef TABTEST_H_
 #define TABTEST_H_
 
+#include "list.h"
+#include "queue.h"
+#include "stack.h"
 
-class TabTest
+class Test
 {
 private:
-
+	List  lista;
+	Stack stos;
+	Queue kolejka;
 public:
 	unsigned int problem_size;
-	virtual void Badaj();
+	virtual void Badaj    ();
 	virtual void Przygotuj();
 };
 

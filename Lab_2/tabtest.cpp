@@ -13,7 +13,7 @@
 using namespace std;
 
 
-void TabTest::Przygotuj()
+void Test::Przygotuj()
 {
 	unsigned int tmp;
 
@@ -26,7 +26,7 @@ void TabTest::Przygotuj()
 
 }
 
-void TabTest::Badaj()
+void Test::Badaj()
 {
 	for(int i = 0; i < this->problem_size; i++)
 	{

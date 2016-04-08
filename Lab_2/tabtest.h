@@ -11,7 +11,7 @@
 #define TABTEST_H_
 
 
-class TabTest : public Badania
+class Test : public Badania
 {
 private:
 	Tab dynamic_tab;

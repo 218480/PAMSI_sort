@@ -16,10 +16,10 @@ class Queue
 private:
 	List data;
 public:
-	virtual int Get();
-	virtual void Push(int val);
-	virtual int Size();
-	virtual ~Queue();
+	virtual int  Get   ();
+	virtual void Push  (int val);
+	virtual int  Get_Size  ();
+	virtual ~Queue     ();
 };
 
 #endif /* INC_QUEUE_H_ */

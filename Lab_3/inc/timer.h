@@ -11,9 +11,9 @@ private:
 	 float value;
 public:
 	void Start();
-	void Stop();
+	void Stop ();
 	float Show();
-	Timer();
+	Timer     ();
 };
 
 

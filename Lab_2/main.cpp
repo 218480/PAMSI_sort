@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char ** argv)
 {
 	Timer time;
-	TabTest test;
+	Test test;
 
 
 	test.Przygotuj();

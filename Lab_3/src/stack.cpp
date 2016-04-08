@@ -1,24 +1,29 @@
 #include "../inc/stack.h"
+#include <iostream>
 
+using namespace std;
 
 void Stack::Push(int val)
 {
-	data.Add(data.Size(),val);
+	data.Add(data.Get_Size(), val);
 }
 
 int Stack::Pop()
 {
 	int tmp;
 
-	tmp = data.Get(data.Size());
-	data.Remove(data.Size());
+
+
+	tmp = data.Get(data.Get_Size() - 1);
+
+	data.Remove(data.Get_Size() - 1);
 
 	return tmp;
 }
 
-int Stack::size()
+int Stack::Get_Size()
 {
-	return data.Size();
+	return data.Get_Size();
 }
 
 Stack::~Stack()

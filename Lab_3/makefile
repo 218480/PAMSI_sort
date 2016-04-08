@@ -1,5 +1,5 @@
-Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o ./obj/list.o
-	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/tabtest.o ./obj/queue.o ./obj/list.o -o Lab3.out
+Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o ./obj/list.o ./obj/node.o
+	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/test.o ./obj/queue.o ./obj/list.o ./obj/node.o -o Lab3.out
 
 ./obj/main.o: ./src/main.cpp
 	mkdir ./obj
@@ -14,11 +14,14 @@ Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o
 ./obj/queue.o: ./src/queue.cpp
 	g++ -c ./src/queue.cpp -o ./obj/queue.o
 
-./obj/tabtest.o: ./src/tabtest.cpp
-	g++ -c ./src/tabtest.cpp -o ./obj/tabtest.o
+./obj/tabtest.o: ./src/test.cpp
+	g++ -c ./src/test.cpp -o ./obj/test.o
 
 ./obj/list.o: ./src/list.cpp
 	g++ -c ./src/list.cpp -o ./obj/list.o
+
+./obj/node.o: ./src/node.cpp
+	g++ -c ./src/node.cpp -o ./obj/node.o
 clean:
 	rm -f ./obj/*.o *.out
 	rmdir ./obj 

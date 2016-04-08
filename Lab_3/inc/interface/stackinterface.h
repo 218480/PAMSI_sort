@@ -6,11 +6,10 @@
 class Stack_Interface
 {
 private:
-	List data;
 public:
-	virtual int  Pop () = 0;
+	virtual int  Pop ()        = 0;
 	virtual void Push(int val) = 0;
-	virtual int  size() = 0;
+	virtual int  Get_Size()    = 0;
 };
 
 #endif

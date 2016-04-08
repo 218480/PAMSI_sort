@@ -14,11 +14,10 @@
 class QueueInterface
 {
 private:
-	List data;
 public:
-	virtual int Get() = 0;
+	virtual int  Get()         = 0;
 	virtual void Push(int val) = 0;
-	virtual int Size() = 0;
+	virtual int  Size()        = 0;
 };
 
 
