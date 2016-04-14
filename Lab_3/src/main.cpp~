@@ -21,7 +21,7 @@ q1.Push(10);
 q1.Push(100);
 q1.Push(1000);
 q1.Push(1000000);
-q1.Push(1000000000);
+q1.Push(100000000);
   for(i=0;i<5;i++){t=q1.Get();
 cout << "czas dla " << t << " danych: " << p1.wykonaj_pomiar(t) << " ms" << endl;}
 	return 0;

@@ -1,5 +1,5 @@
 Lab3.out: ./obj/main.o ./obj/timer.o ./obj/tabtest.o ./obj/stack.o ./obj/queue.o ./obj/list.o ./obj/node.o ./obj/qsort.o ./obj/msort.o ./obj/pomiarqsort.o
-	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/test.o ./obj/queue.o ./obj/list.o ./obj/node.o ./obj/qsort.o ./obj/msort.o ./obj/pomiarqsort.o -o Lab3.out
+	g++ ./obj/main.o ./obj/timer.o ./obj/stack.o  ./obj/test.o ./obj/queue.o ./obj/list.o ./obj/node.o ./obj/qsort.o ./obj/msort.o pomiarqsort.o -o Lab3.out
 
 ./obj/main.o: ./src/main.cpp ./inc/qsort.h
 	mkdir ./obj
